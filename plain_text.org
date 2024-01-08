@@ -1,0 +1,126 @@
+#+title: How I learned to top worrying and love plain text
+#+OPTIONS: ^:nil toc:nil
+#+BEAMER_THEME: metropolis
+
+* Initial points
+- I define plain text as any set of data (human) users interact with that use characters (preferably UTF-8)
+- Our goal is to simplify information transfer between computers AND between computers and people
+
+* Overview of plain text tools/interfaces
+** Magit (Emacs) - Fugitive (Vim) - LazyGit (CLI)
+** Modal editing
+** Remote access
+** Minimise  - markdown - org - logseq
+
+* Essential text processing tools
+- *cat* (\plus{}tac): print file (or reverse lines)
+- *head/tail*: print first/last n lines of file
+- *rev*: Reverse lines
+- *wc*: Count words/lines/characters
+- *sort*: Sort lines
+- *uniq*: Get unique lines
+- *tr*: Replace/delete characters
+- *grep* (\plus{}ripgrep): Select lines
+- *cut*: Select columns
+- *paste*: Combine documents or the lines in one
+
+* Other useful tools
+# Anything you use data processing processing you can use to process your notes
+- *tee*: Read from stdin and write to stdout and files.
+- *sponge*: Recycle input file when processing (moreutils package)
+- *jq*: Query json files/stdio
+- *sed*: Standard editor, useful for simple edits with no variables
+- *awk*: Versatile programming language for more complex queries
+- *perl* (\plus{}python): Languages for complex one-line queries
+
+
+
+* File management
+- Most operations do not require complex graphical interfaces
+
+- Anything a terminal could ssh into, but pretend it is local
+** Also available for many other remote protocols
+
+
+* Plain text can be a git interface
+[[file:demos/1_demo_git.mov][magit demo]]
+* Plain text can be a git interface
+- Git operations become routine
+- Select specific code regions to commit
+- Explore previous versions
+- Issues and requests included
+- Learn git as you go, it shows the commands you invoke
+- Alternatives: fugitive (Vim), lazygit (TUI)
+
+* Modal editing
+** Use regular expressions to find and replace regions
+** change, surround, replace, exchange, text becomes objects to edit
+** Code folding
+
+* Cooking
+#+ATTR_LATEX: :width 0.5\textwidth
+[[./figs/cooking.png]]
+
+
+* Python-specific tools
+** black (auto-formatting)
+** isort (Sort imports)
+** LSP (Language Server Protocol)
+** Notebooks-like (jupyter-like access ot cells)
+
+** Live coding interface
+
+* Plain text can:
+** Run notebooks with multiple languages
+** Include bibliography
+** Task management
+** Visualise undo trees
+** Basic spreadsheets
+** Run timers and deltas
+** Note forwards and backlinks
+
+
+* Other great features
+** Same local and remote file management
+** Project-wide operations
+** Snippets accessible anywhere
+** Multiple cursors look cool
+
+
+* Plain text is (most) you need
+** Why is fast feedback important for data scientists and software engineers?
+** As portable as it gets
+** Can be converted to any other format
+** Version control!
+** Lowers the feeling working on a server vs a  local machine
+
+
+* Where does it falter?
+- Review/Collaboration (e.g., GDrive review tools)
+- Visualisation of complex data (e.g., plotting dense data)
+- Replacing structured data (e.g., spreadsheets, big data frames)
+
+* Other things that plain text is capable of
+- Bibliography management
+- Database of personal notes
+- RSS (Really Simple Syndication)
+
+* Resources
+- [[https://github.com/tldr-pages/tldr][tldr]]: DIsplay simple pages for command line tools
+- [[More details in an email with the same subject. This calendar event is a reminder for ourselves to get started on this.][lazygit]]: Git command line interface
+- [[https://github.com/mwouts/jupytext][jupytext]]: Jupyter notebooks <-> plain text
+- [[https://jpospisil.com/2023/12/19/the-hidden-gems-of-moreutils][moreutils]]: Additional CLI tools
+- [[http://mermaid.js.org/][mermaid]]: Generate diagrams from plain text (Github renders)
+- [[https://pandoc.org/][pandoc]]: Convert markup languages into each other
+- [[https://github.com/captn3m0/plaintext-everything][plain-text-everything]]: List of other projects that use plain text
+
+* Other fun tools
+- *more/less*: Look at file, also interactively
+- *screen*: Run background sessions and restart them
+- *du*: Check folder size
+- *fzf*: command fuzzy finder
+- *fish*: bash with QOL improvements (not always compatible with bash/zsh)
+- *htop/btop*: process management
+- *rsync*: Synchronise copies of the same files
+- *parallel*: Use multiple cores
+- *csvtools*: Tools for CSV
