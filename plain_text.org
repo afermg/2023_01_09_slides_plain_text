@@ -2,16 +2,43 @@
 #+OPTIONS: ^:nil toc:nil
 #+BEAMER_THEME: metropolis
 
-* Initial points
-- I define plain text as any set of data (human) users interact with that use characters (preferably UTF-8)
-- Our goal is to simplify information transfer between computers AND between computers and people
+* Goal
+Showcase plain text and its tools as a useful alternative more complex formats and tools.
 
-* Overview of plain text tools/interfaces
-** Magit (Emacs) - Fugitive (Vim) - LazyGit (CLI)
-** Modal editing
-** Remote access
-** Minimise  - markdown - org - logseq
+* What do I mean by plain text?
+- I define "Plain text" as data represented by readable characters and in a human-readable format.
+-  It is understandable without an specialised tool.
+* To be more specific:
+:PROPERTIES:
+:BEAMER_ACT: <+->
+:END:
+** Examples:
+:PROPERTIES:
+:BEAMER_col: 0.5
+:BEAMER_ACT: <+->
+:END:
+  - Markdown
+  - CSV files
+  - Source code (pre-compilation)
 
+** Examples of what it is not:
+:PROPERTIES:
+:BEAMER_col: 0.5
+:BEAMER_ACT: <+->
+:END:
+- Data containing floating points
+- Images
+- Html
+
+* It offers multiple benefits
+- Universal
+- Lightweight
+- Portable
+- The maintenance cost of its toolsets is lower than GUIs
+
+* Plain text may not be interesting at first
+#+ATTR_LATEX: :width 0.9\textwidth
+[[./figs/chart.png]]
 * Essential text processing tools
 - *cat* (\plus{}tac): print file (or reverse lines)
 - *head/tail*: print first/last n lines of file
@@ -24,16 +51,20 @@
 - *cut*: Select columns
 - *paste*: Combine documents or the lines in one
 
-* Other useful tools
+* Additional useful tools
 # Anything you use data processing processing you can use to process your notes
 - *tee*: Read from stdin and write to stdout and files.
 - *sponge*: Recycle input file when processing (moreutils package)
-- *jq*: Query json files/stdio
+- *jq*: Query json files/stdin
 - *sed*: Standard editor, useful for simple edits with no variables
 - *awk*: Versatile programming language for more complex queries
 - *perl* (\plus{}python): Languages for complex one-line queries
 
-
+* Overview of plain text tools/interfaces
+Interfaces minimise friction between processes
+- Modal editing
+- Git interfaces: Magit (Emacs), Fugitive (Vim), LazyGit (CLI)
+- File management interfaces
 
 * File management
 - Most operations do not require complex graphical interfaces
@@ -55,19 +86,16 @@
 ** change, surround, replace, exchange, text becomes objects to edit
 ** Code folding
 
-* Cooking
+* There is a markup language for cooking
 #+ATTR_LATEX: :width 0.5\textwidth
 [[./figs/cooking.png]]
 
-
-* Python-specific tools
-** black (auto-formatting)
-** isort (Sort imports)
-** LSP (Language Server Protocol)
-** Notebooks-like (jupyter-like access ot cells)
-
+* Many text tools improve the Python development experience
+** black: auto-formatting
+** isort: Sort imports
+** jupytext:  Jupyter Notebook <-> Python script
+** LSP (Language Server Protocol): Code linter
 ** Live coding interface
-
 * Plain text can:
 ** Run notebooks with multiple languages
 ** Include bibliography
@@ -77,35 +105,26 @@
 ** Run timers and deltas
 ** Note forwards and backlinks
 
-
-* Other great features
-** Same local and remote file management
-** Project-wide operations
-** Snippets accessible anywhere
-** Multiple cursors look cool
-
-
-* Plain text is (most) you need
+* Where does plain text underperform?
+- Review/Collaboration (e.g., GDrive review tools)
+- Visualisation of complex data (e.g., plotting dense data)
+- Replacing structured data (e.g., spreadsheets, big data frames)
+* Other things that plain text is capable of
+- Bibliography management
+- Database of personal notes
+- RSS (Really Simple Syndication)
+* Does it actually make a difference?
+Depends on one's workflow, but mid and long-term it reduces friction when processing data and accessing computing resources anywhere.
+* Conclusions
 ** Why is fast feedback important for data scientists and software engineers?
 ** As portable as it gets
 ** Can be converted to any other format
 ** Version control!
 ** Lowers the feeling working on a server vs a  local machine
 
-
-* Where does it falter?
-- Review/Collaboration (e.g., GDrive review tools)
-- Visualisation of complex data (e.g., plotting dense data)
-- Replacing structured data (e.g., spreadsheets, big data frames)
-
-* Other things that plain text is capable of
-- Bibliography management
-- Database of personal notes
-- RSS (Really Simple Syndication)
-
 * Resources
 - [[https://github.com/tldr-pages/tldr][tldr]]: DIsplay simple pages for command line tools
-- [[More details in an email with the same subject. This calendar event is a reminder for ourselves to get started on this.][lazygit]]: Git command line interface
+- [[https://github.com/jesseduffield/lazygit][lazygit]]: Git command line interface
 - [[https://github.com/mwouts/jupytext][jupytext]]: Jupyter notebooks <-> plain text
 - [[https://jpospisil.com/2023/12/19/the-hidden-gems-of-moreutils][moreutils]]: Additional CLI tools
 - [[http://mermaid.js.org/][mermaid]]: Generate diagrams from plain text (Github renders)
