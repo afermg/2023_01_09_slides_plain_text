@@ -36,6 +36,10 @@
 
 
 * File management
+\href{run:./figs/1_demo_dired_wdired.mp4}{We can rename files in bulk}
+\href{run:./figs/2_demo_tramp.mp4}{Access server data remotely}
+
+* File management
 - Most operations do not require complex graphical interfaces
 
 - Anything a terminal could ssh into, but pretend it is local
@@ -51,6 +55,9 @@
 - Issues and requests included
 - Learn git as you go, it shows the commands you invoke
 - Alternatives: fugitive (Vim), lazygit (TUI)
+
+* Diff and Undo
+\href{run:./figs/4_undo_tree.mp4}{Visualise file differences in undo}
 
 * Modal editing
 ** Use regular expressions to find and replace regions
