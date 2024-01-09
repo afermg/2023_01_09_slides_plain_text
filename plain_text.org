@@ -1,4 +1,4 @@
-#+title: How I learned to top worrying and love plain text
+#+title: How I learned to stop worrying and love plain text
 #+OPTIONS: ^:nil toc:nil
 #+LaTeX_CLASS: beamer
 #+BEAMER_THEME: metropolis
@@ -68,13 +68,14 @@ Interfaces minimise friction between processes
 - Modal editing
 - Git interfaces: Magit (Emacs), Fugitive (Vim), LazyGit (CLI)
 - File management interfaces
+- Smart text editing
 
 * Modal editing
 - Use regular expressions to find and replace regions
 - change, surround, replace, exchange, text becomes objects to edit
 - Code folding
 * File management
-- \href{run:./demos/1_demo_dired_wdired.mp4}{We can rename files in bulk}
+- \href{run:./demos/1_dired_wdired.mp4}{We can rename files in bulk}
 - \href{run:./demos/2_tramp.mp4}{Access server data remotely}
 
 * File management
@@ -131,7 +132,7 @@ Interfaces minimise friction between processes
 
 * Does it actually make a difference?
 
-Depends on one's workflow, but mid and long-term it reduces friction when processing data and accessing computing resources anywhere.
+Depends on one's workflow, but it reduces friction usually caused by switching between a multitude of apps.
 
 * Conclusions:
 ** Plain text universal and portable
