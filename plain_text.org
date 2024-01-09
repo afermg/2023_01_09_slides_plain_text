@@ -72,7 +72,7 @@ Interfaces minimise friction between processes
 
 * Plain text can be a git interface
 
-\href{run:./figs/1_demo_git.mp4}{Adding file to repository}
+\href{run:./figs/1_demo_git.mp4}{Adding a file to repository}
 * Plain text can be a git interface
 - Git operations become routine
 - Select specific code regions to commit
