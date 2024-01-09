@@ -37,13 +37,11 @@
 
 * File management
 - Most operations do not require complex graphical interfaces
-
 - Anything a terminal could ssh into, but pretend it is local
-** Also available for many other remote protocols
-
 
 * Plain text can be a git interface
-[[file:demos/1_demo_git.mov][magit demo]]
+
+\href{run:./figs/1_demo_git.mp4}{Adding file to repository}
 * Plain text can be a git interface
 - Git operations become routine
 - Select specific code regions to commit
