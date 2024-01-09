@@ -74,26 +74,26 @@ Interfaces minimise friction between processes
 - change, surround, replace, exchange, text becomes objects to edit
 - Code folding
 * File management
-\href{run:./figs/1_demo_dired_wdired.mp4}{We can rename files in bulk}
-\href{run:./figs/2_tramp.mp4}{Access server data remotely}
+- \href{run:./demos/1_demo_dired_wdired.mp4}{We can rename files in bulk}
+- \href{run:./demos/2_tramp.mp4}{Access server data remotely}
 
 * File management
 - Most operations do not require complex graphical interfaces
 - Anything a terminal could ssh into, but pretend it is local
 
 * Plain text can be a git interface
-\href{run:./figs/3_git.mp4}{Adding a file to repository}
-\href{run:./figs/4_merge_conflict.mp4}{Adding a file to repository}
+- \href{run:./demos/3_git.mp4}{Stage-Commit-Push files to a repository}
+- \href{run:./demos/4_merge_conflict.mp4}{Merging and solving conflicts}
 * Plain text can be a git interface
 - Git operations become routine
 - Select specific code regions to commit
 - Explore previous versions
 - Issues and requests included
 - Learn git as you go, it shows the commands you invoke
-- Alternatives: fugitive (Vim), lazygit (TUI)
+- Interfaces: lazygit (TUI), fugitive (Vim), magit (Emacs)
 
 * Diff and Undo
-\href{run:./figs/5_undo_tree.mp4}{Visualise file differences in undo}
+- \href{run:./demos/5_undo_tree.mp4}{Visualise file differences in undo}
 
 * There is a markup language for cooking
 #+ATTR_LATEX: :width 0.8\textwidth
@@ -127,8 +127,7 @@ Interfaces minimise friction between processes
 3. Bring functions together to give it structure
 4. Iterate until data has been processed enough
 
-\href{run:./figs/1_demo_dired_wdired.mp4}{- Feedback speed from where the data is matters}
-
+- \href{run:./demos/1_demo_dired_wdired.mp4}{- Feedback speed from where the data is matters}
 
 * Does it actually make a difference?
 
@@ -142,8 +141,8 @@ Depends on one's workflow, but mid and long-term it reduces friction when proces
 ** There are already toolkits to process it in most imaginable ways
 
 * Relevant XKCD
-#+ATTR_LATEX: :width 0.9\textwidth
-[[figs/xkcd_2109.png]]
+#+ATTR_LATEX: :height 0.6\textwidth
+[[./figs/xkcd_2109.png]]
 
 * Resources
 - [[https://github.com/tldr-pages/tldr][tldr]]: DIsplay simple pages for command line tools
