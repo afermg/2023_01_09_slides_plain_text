@@ -1,51 +1,54 @@
 #+title: How I learned to top worrying and love plain text
 #+OPTIONS: ^:nil toc:nil
+#+LaTeX_CLASS: beamer
 #+BEAMER_THEME: metropolis
+#+COLUMNS: %45ITEM %10BEAMER_env(Env) %10BEAMER_act(Act) %4BEAMER_col(Col) %8BEAMER_opt(Opt)
 
 * Goal
-Showcase plain text and its tools as a useful alternative more complex formats and tools.
+Showcase plain text and its tools as a valid approach in place of more complex formats and tools.
 
 * What do I mean by plain text?
-- I define "Plain text" as data represented by readable characters and in a human-readable format.
+- I define "plain text" as data represented by readable characters and in a human-readable format.
 -  It is understandable without an specialised tool.
-* To be more specific:
+* Examples
+** Plain text is
 :PROPERTIES:
-:BEAMER_ACT: <+->
-:END:
-** Examples:
-:PROPERTIES:
+:BEAMER_ENV: block
 :BEAMER_col: 0.5
-:BEAMER_ACT: <+->
 :END:
   - Markdown
   - CSV files
   - Source code (pre-compilation)
 
-** Examples of what it is not:
+** And is not
 :PROPERTIES:
+:BEAMER_ENV: block
 :BEAMER_col: 0.5
-:BEAMER_ACT: <+->
+:BEAMER_ACT: <2->
 :END:
 - Data containing floating points
 - Images
 - Html
 
 * It offers multiple benefits
+:PROPERTIES:
+:BEAMER_act: <+->
+:END:
 - Universal
 - Lightweight
 - Portable
 - The maintenance cost of its toolsets is lower than GUIs
 
-* Plain text may not be interesting at first
-#+ATTR_LATEX: :width 0.9\textwidth
+* Plain text may sound like an outdated notion
+#+ATTR_LATEX: :width 0.7\textwidth
 [[./figs/chart.png]]
 * Essential text processing tools
-- *cat* (\plus{}tac): print file (or reverse lines)
+- *cat* (\plus{}tac): print file (or reverse line order)
 - *head/tail*: print first/last n lines of file
 - *rev*: Reverse lines
 - *wc*: Count words/lines/characters
 - *sort*: Sort lines
-- *uniq*: Get unique lines
+- *uniq*: Show unique lines
 - *tr*: Replace/delete characters
 - *grep* (\plus{}ripgrep): Select lines
 - *cut*: Select columns
@@ -66,17 +69,21 @@ Interfaces minimise friction between processes
 - Git interfaces: Magit (Emacs), Fugitive (Vim), LazyGit (CLI)
 - File management interfaces
 
+* Modal editing
+- Use regular expressions to find and replace regions
+- change, surround, replace, exchange, text becomes objects to edit
+- Code folding
 * File management
 \href{run:./figs/1_demo_dired_wdired.mp4}{We can rename files in bulk}
-\href{run:./figs/2_demo_tramp.mp4}{Access server data remotely}
+\href{run:./figs/2_tramp.mp4}{Access server data remotely}
 
 * File management
 - Most operations do not require complex graphical interfaces
 - Anything a terminal could ssh into, but pretend it is local
 
 * Plain text can be a git interface
-
-\href{run:./figs/4_demo_git.mp4}{Adding a file to repository}
+\href{run:./figs/3_git.mp4}{Adding a file to repository}
+\href{run:./figs/4_merge_conflict.mp4}{Adding a file to repository}
 * Plain text can be a git interface
 - Git operations become routine
 - Select specific code regions to commit
@@ -86,28 +93,22 @@ Interfaces minimise friction between processes
 - Alternatives: fugitive (Vim), lazygit (TUI)
 
 * Diff and Undo
-\href{run:./figs/4_undo_tree.mp4}{Visualise file differences in undo}
-
-* Modal editing
-** Use regular expressions to find and replace regions
-** change, surround, replace, exchange, text becomes objects to edit
-** Code folding
+\href{run:./figs/5_undo_tree.mp4}{Visualise file differences in undo}
 
 * There is a markup language for cooking
-#+ATTR_LATEX: :width 0.5\textwidth
+#+ATTR_LATEX: :width 0.8\textwidth
 [[./figs/cooking.png]]
 
 * Many text tools improve the Python development experience
-** black: auto-formatting
-** isort: Sort imports
-** jupytext:  Jupyter Notebook <-> Python script
-** LSP (Language Server Protocol): Code linter
-** Live coding interface
+- black: auto-formatting
+- isort: Sort imports
+- jupytext:  Jupyter Notebook <-> Python script
+- LSP (Language Server Protocol): Code linter
+- Live coding interface
 * Plain text can:
 ** Run notebooks with multiple languages
 ** Include bibliography
 ** Task management
-** Visualise undo trees
 ** Basic spreadsheets
 ** Run timers and deltas
 ** Note forwards and backlinks
@@ -120,14 +121,29 @@ Interfaces minimise friction between processes
 - Bibliography management
 - Database of personal notes
 - RSS (Really Simple Syndication)
+* Why is fast feedback important for data scientists and software engineers?
+1. Load data into memory
+2. Process the data
+3. Bring functions together to give it structure
+4. Iterate until data has been processed enough
+
+\href{run:./figs/1_demo_dired_wdired.mp4}{- Feedback speed from where the data is matters}
+
+
 * Does it actually make a difference?
+
 Depends on one's workflow, but mid and long-term it reduces friction when processing data and accessing computing resources anywhere.
-* Conclusions
-** Why is fast feedback important for data scientists and software engineers?
-** As portable as it gets
-** Can be converted to any other format
-** Version control!
-** Lowers the feeling working on a server vs a  local machine
+
+* Conclusions:
+** Plain text universal and portable
+** Can be converted to any other text format
+** Enables version control
+** Lowers the feeling working on a server vs a local machine
+** There are already toolkits to process it in most imaginable ways
+
+* Relevant XKCD
+#+ATTR_LATEX: :width 0.9\textwidth
+[[figs/xkcd_2109.png]]
 
 * Resources
 - [[https://github.com/tldr-pages/tldr][tldr]]: DIsplay simple pages for command line tools
@@ -147,4 +163,4 @@ Depends on one's workflow, but mid and long-term it reduces friction when proces
 - *htop/btop*: process management
 - *rsync*: Synchronise copies of the same files
 - *parallel*: Use multiple cores
-- *csvtools*: Tools for CSV
+- *csvtools*: Tools for managing CSV
